@@ -6,12 +6,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "vite serve",
-    "build": "vite build"
+    "build": "vite build",
+	"lint": "eslint ."
   },
   "author": "sole",
   "license": "UNLICENSED",
   "devDependencies": {
     "@vitejs/plugin-react": "^4.0.4",
+    "eslint": "^8.49.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "vite": "^4.4.9"
