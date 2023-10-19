@@ -1,12 +1,14 @@
 import globals from "globals";
 import js from "@eslint/js";
-import reactConfig from "eslint-plugin-react";
+import reactRecommendedConfig from "eslint-plugin-react/configs/recommended.js"
+import reactJSXConfig from "eslint-plugin-react/configs/jsx-runtime.js"
+import reactRefreshPlugin from "eslint-plugin-react-refresh";
 
 
 export default [
 	js.configs.recommended,
-	reactConfig.configs.recommended,
-	reactConfig.configs["jsx-runtime"],
+	reactRecommendedConfig,
+	reactJSXConfig,
 	{
 		files: ["src/**/*.js", "src/**/*.jsx"],
 		languageOptions: {
@@ -14,16 +16,19 @@ export default [
 				...globals.browser
 			},
 			parserOptions: {
-				ecmaVersion: 2020
+				ecmaVersion: 2020,
+				sourceType: 'module'
 			}
 		},
 		settings: { react: { version: '18.2' } },
-		plugins: ['react-refresh'],
+		plugins: {
+			'react-refresh': reactRefreshPlugin
+		},
 		rules: {
-		'react-refresh/only-export-components': [
-			'warn',
-			{ allowConstantExport: true },
-		],
+			'react-refresh/only-export-components': [
+				'warn',
+				{ allowConstantExport: true },
+			],
 		},
 	},
 	{
