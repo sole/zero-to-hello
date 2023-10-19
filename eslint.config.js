@@ -1,6 +1,15 @@
+import globals from "globals";
+
 export default [{
-	env: { browser: true, es2020: true },
-	parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
+	files: ["src/**/*.js", "src/**/*.jsx"],
+	languageOptions: {
+		globals: {
+			...globals.browser
+		},
+		parserOptions: {
+			ecmaVersion: 2020
+		}
+	},
 	ignorePatterns: ['build', '.eslintrc.cjs'],
 	extends: [
 		'eslint:recommended',
