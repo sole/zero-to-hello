@@ -1,4 +1,4 @@
-module.exports = {
+export default [{
 	env: { browser: true, es2020: true },
 	parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
 	ignorePatterns: ['build', '.eslintrc.cjs'],
@@ -15,4 +15,4 @@ module.exports = {
 		{ allowConstantExport: true },
 	  ],
 	},
-}
+}];
