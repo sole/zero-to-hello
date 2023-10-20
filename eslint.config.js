@@ -17,7 +17,10 @@ export default [
 			},
 			parserOptions: {
 				ecmaVersion: 2020,
-				sourceType: 'module'
+				sourceType: 'module',
+				ecmaFeatures: {
+					jsx: true
+				}
 			}
 		},
 		settings: { react: { version: '18.2' } },
