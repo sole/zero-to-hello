@@ -14,7 +14,7 @@
   "license": "UNLICENSED",
   "devDependencies": {
     "@eslint/js": "^8.51.0",
-    "@vitejs/plugin-react": "^4.0.4",
+    "@vitejs/plugin-react": "^4.2.1",
     "eslint": "^8.49.0",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
